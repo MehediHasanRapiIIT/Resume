@@ -32,13 +32,23 @@ the button opens the print dialog on a plain print layout, which can be saved as
 
 ## Shortcuts
 
-- `1`–`7` open a window
-- `terminal.exe` accepts commands; type `help`
+- `1`–`9` open a window
+- `terminal.exe` accepts commands; type `help` (try `neofetch`)
+
+## Windows
+
+| Window | What it shows |
+|---|---|
+| `about.txt` … `contact.sh` | Resume content from `src/lib/resume.ts` |
+| `github.dir` | Live repositories (search, language filter, sort, language chart) and recent public activity |
+| `lab.dir` | Playable Connect-4 against a Minimax AI (runs in a Web Worker), and a BST visualizer |
+| `terminal.exe` | Command line over the same content |
 
 ## GitHub data
 
-Star counts, languages and last-updated dates are fetched live from GitHub's public API for the
-user in `profile.github` (`src/lib/resume.ts`). If the request fails, those lines simply don't
-appear. Set `profile.github` to `''` to switch it off.
+Repositories, languages, star counts, last-updated dates and recent activity are fetched live from
+GitHub's public API for the user in `profile.github` (`src/lib/resume.ts`). Responses are cached
+in the visitor's session (GitHub allows 60 unauthenticated requests per hour per IP). If a
+request fails, the extra lines simply don't appear. Set `profile.github` to `''` to switch it off.
 - `Esc` closes the focused window
 - Drag a title bar to move a window
